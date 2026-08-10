@@ -1,5 +1,5 @@
-def ask_choix():
-    choix = input("Entre un nom d'insecte: ")
+
+choix = input("Entre un nom d'insecte: ")
 
 def dep_save():
     with open('dep_save.txt', 'r') as f:

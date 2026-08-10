@@ -22,8 +22,6 @@ def save():
             dep_save()       
 
 
-ask_choix()
-
 if choix in insectes:
     price = insectes[choix]
 
