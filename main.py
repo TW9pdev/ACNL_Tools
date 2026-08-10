@@ -1,4 +1,5 @@
-from stock import *
+from stock_var import*
+from stock_list import*
 
 total = []
 lignes= []
