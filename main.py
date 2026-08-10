@@ -46,8 +46,9 @@ if quitter == "Exit":
 elif quitter == "Save":
     save()
     print("La sauvegarde a bien été effectué")
-elif quitter == "Continuer":
-    tout()
+    exit()
+#elif quitter == "Continuer":
+#    tout()
 elif quitter == "Reset_save":
     reset_save()
     print("La sauvegarde a bien été supprimé")
@@ -57,15 +58,10 @@ elif quitter == "Reset_dep_save":
 elif quitter == "Reset":
     reset_all()
     print("La sauvegarde a bien été supprimé")
-elif quitter == "Save+Continuer":
-    save()
-    print("La sauvegarde a bien été effectué")
-    tout()
-elif quitter == "Save+Quitter":
-    save()
-    print("La sauvegarde a bien été effectué")
-    print("Vous allez quitter le programme")
-    exit()
+#elif quitter == "Save+Continuer":
+#    save()
+#   print("La sauvegarde a bien été effectué")
+#    tout()
 elif quitter != "Exit" "Save" "Reset" "Reset_save" "Reset_dep_save" "Save+Continuer" "Save+Quitter":
 
     while quitter != "Save" "Quitter" "Reset_save" "Reset_dep_save" "Reset":
@@ -76,8 +72,10 @@ elif quitter != "Exit" "Save" "Reset" "Reset_save" "Reset_dep_save" "Save+Contin
                 exit()
             elif quitter == "Save":
                 save()
-            elif quitter == "Continuer":
-                tout()
+                print("La sauvegarde a bien été sauvegardé")
+                exit()
+#            elif quitter == "Continuer":
+#                tout()
             elif quitter == "Reset_save":
                 reset_save()
                 print("La sauvegarde a bien été supprimé")
@@ -87,15 +85,10 @@ elif quitter != "Exit" "Save" "Reset" "Reset_save" "Reset_dep_save" "Save+Contin
             elif quitter == "Reset":
                 reset_all()
                 print("La sauvegarde a bien été supprimé")
-            elif quitter == "Save+Continuer":
-                save()
-                print("La sauvegarde a bien été effectué")
-                tout()
-            elif quitter == "Save+Quitter":
-                save()
-                print("La sauvegarde a bien été effectué")
-                print("Vous allez quitter le programme")
-                exit()
+#            elif quitter == "Save+Continuer":
+#                save()
+#                print("La sauvegarde a bien été effectué")
+#                tout()
             elif quitter != "Exit" "Save" "Reset":
                 print("Entre une des options")
         except ValueError:
