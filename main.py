@@ -1,3 +1,4 @@
+import json
 from stock_var import*
 from stock_list import*
 
