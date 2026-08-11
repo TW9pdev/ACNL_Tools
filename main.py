@@ -6,16 +6,16 @@ lignes= []
 
 
 def save():
-    with open('dep_save.txt', 'r') as f:
+    with open('save_elements/dep_save.txt', 'r') as f:
         read_dep = f.read()
     if read_dep == str(0):
-        with open('save.txt', 'w') as f:
+        with open('save_elements/save.txt', 'w') as f:
             f.write(choix)
             f.write(" - ")
             f.write(price_write)
             dep_save()
     else:
-        with open('save.txt', 'a') as f:
+        with open('save_elements/save.txt', 'a') as f:
             f.write("\n")
             f.write(choix)
             f.write(" - ")
@@ -23,15 +23,15 @@ def save():
             dep_save()       
 
 
-if choix in insectes:
-    price = insectes[choix]
+if choix in creatures:
+    price = creatures[choix]
 
 else:
-    while choix not in insectes:
+    while choix not in creatures:
         try:
             choix = input("Entre un nom d'insecte correct")
-            if choix in insectes:
-                price = insectes[choix]
+            if choix in creatures:
+                price = creatures[choix]
                 break
         except ValueError:
             print("Cet insecte n'existe pas")
@@ -40,7 +40,7 @@ price_write = price + "Cl"
 
 print(price, "Cl")
 
-quitter = input("Continuer Exit Save; ou combine")
+quitter = input("'Exit' pour quitter, 'Save' pour sauvegarder et quitter, 'Reset' pour reset la save")
 if quitter == "Exit":
     print("Vous allez quitter le programme")
     exit()
@@ -63,7 +63,7 @@ elif quitter == "Reset":
 #    save()
 #   print("La sauvegarde a bien été effectué")
 #    tout()
-elif quitter != "Exit" "Save" "Reset" "Reset_save" "Reset_dep_save" "Save+Continuer" "Save+Quitter":
+elif quitter != "Exit" "Save" "Reset" "Reset_save" "Reset_dep_save" "Save+Quitter":
 
     while quitter != "Save" "Quitter" "Reset_save" "Reset_dep_save" "Reset":
         try:

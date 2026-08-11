@@ -1,45 +1,46 @@
 
-choix = input("Entre un nom d'insecte: ")
+choix = input("Entre un nom d'une créature: ")
 
 def dep_save():
-    with open('dep_save.txt', 'r') as f:
+    with open('save_elements/dep_save.txt', 'r') as f:
             a = int(f.read())
 
     a += 1
 
-    with open('dep_save.txt', 'w') as f:
+    with open('save_elements/dep_save.txt', 'w') as f:
         f.write(str(a))
 
 
 def reset_dep_save():
-    with open('dep_save.txt', 'w') as f:
+    with open('save_elements/dep_save.txt', 'w') as f:
         f.write(str(0))
 
     
 def reset_save():
-    with open('save.txt', 'w') as f:
+    with open('save_elements/save.txt', 'w') as f:
         f.write(str(""))
 
 
 def reset_all():
-    with open('save.txt', 'w') as f:
+    with open('save_elements/save.txt', 'w') as f:
         f.write(str(""))
-    with open('dep_save.txt', 'w') as f:
+    with open('save_elements/dep_save.txt', 'w') as f:
         f.write(str(0))
 
 def save():
-    with open('dep_save.txt', 'r') as f:
+    with open('save_elements/dep_save.txt', 'r') as f:
         read_dep = f.read()
     if read_dep == str(0):
-        with open('save.txt', 'w') as f:
+        with open('save_elements/save.txt', 'w') as f:
             f.write(choix)
             f.write(" - ")
             f.write(price_write)
             dep_save()
     else:
-        with open('save.txt', 'a') as f:
+        with open('save_elements/save.txt', 'a') as f:
             f.write("\n")
             f.write(choix)
             f.write(" - ")
             f.write(price_write)
-            dep_save()    
+            dep_save()
+
