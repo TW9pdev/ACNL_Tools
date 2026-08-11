@@ -1,5 +1,3 @@
-ram = []
-
 def tout():
     choix = input("Entre un nom d'insecte: ")
 

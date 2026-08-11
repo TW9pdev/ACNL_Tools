@@ -10,18 +10,19 @@ def save():
     with open('save_elements/dep_save.txt', 'r') as f:
         read_dep = f.read()
     if read_dep == str(0):
-        with open('save_elements/save.txt', 'w') as f:
-            f.write(choix)
-            f.write(" - ")
-            f.write(price_write)
+        with open('save_elements/save.json', 'w') as f:
+            data = { choix: {price: "Cl"}}
+            json.dump(data, f, indent=2)
+            #f.write(" - ")
+            #f.write(price_write)
             dep_save()
     else:
-        with open('save_elements/save.txt', 'a') as f:
-            f.write("\n")
-            f.write(choix)
-            f.write(" - ")
-            f.write(price_write)
-            dep_save()       
+        with open('save_elements/save.json', 'a') as f:
+            data = { choix: {price: "Cl"}}
+            json.dump(data, f, indent=2)
+            #f.write(" - ")
+            #f.write(price_write)
+            dep_save()      
 
 
 if choix in creatures:
