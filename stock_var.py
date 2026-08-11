@@ -1,5 +1,5 @@
 
-choix = input("Entre un nom d'une créature: ")
+choix = input("Entre le nom d'une créature: ")
 
 def dep_save():
     with open('save_elements/dep_save.txt', 'r') as f:
