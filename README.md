@@ -9,7 +9,7 @@ Vous pouvez enregistrer vos prise ainsi que le prix auquel vous pourrez revendre
 
 ## Crédits:
 
-Merci à [Wither](https://github.com/wither16x) et à @BusyBox pour l'aide dans le développement du projet !
+Merci à [Wither](https://github.com/wither16x) et à [BusyBox](https://github.com/BusyBox13) pour l'aide dans le développement du projet !
 
 ## Créateur:
 
