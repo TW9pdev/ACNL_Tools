@@ -31,7 +31,7 @@ if choix in creatures:
 else:
     while choix not in creatures:
         try:
-            choix = input("Entre un nom de créature correct")
+            choix = input("Entre un nom de créature correct: ")
             if choix in creatures:
                 price = creatures[choix]
                 break
@@ -65,9 +65,9 @@ elif quitter == "Reset":
 #    save()
 #   print("La sauvegarde a bien été effectué")
 #    tout()
-elif quitter != "Exit" "Save" "Reset" "Reset_save" "Reset_dep_save":
+elif quitter not in ["Exit", "Save", "Reset", "Reset_save", "Reset_dep_save"]:
 
-    while quitter != "Save" "Quitter" "Reset_save" "Reset_dep_save" "Reset":
+    while quitter not in ["Save", "Quitter", "Reset_save", "Reset_dep_save", "Reset"]:
         try:
             quitter = input("'Exit' pour quitter, 'Save' pour sauvegarder et quitter, 'Reset' pour reset la save")
             if quitter == "Exit":
