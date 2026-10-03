@@ -1,4 +1,3 @@
-
 choix = input("Entre le nom d'une créature: ")
 
 def dep_save():

@@ -24,76 +24,77 @@ def save():
             #f.write(price_write)
             dep_save()      
 
+def tout():
+    if choix in creatures:
+        price = creatures[choix]
 
-if choix in creatures:
-    price = creatures[choix]
+    else:
+        while choix not in creatures:
+            try:
+                choix = input("Entre un nom de créature correct: ")
+                if choix in creatures:
+                    price = creatures[choix]
+                    break
+            except ValueError:
+                print("Cette créature n'existe pas")
 
-else:
-    while choix not in creatures:
-        try:
-            choix = input("Entre un nom de créature correct: ")
-            if choix in creatures:
-                price = creatures[choix]
-                break
-        except ValueError:
-            print("Cette créature n'existe pas")
+    price_write = price + "Cl"
 
-price_write = price + "Cl"
+    print(price, "Cl")
 
-print(price, "Cl")
+    quitter = input("'Exit' pour quitter, 'Save' pour sauvegarder et quitter, 'Reset' pour reset la save")
+    if quitter == "Exit":
+        print("Vous allez quitter le programme")
+        exit()
+    elif quitter == "Save":
+        save()
+        print("La sauvegarde a bien été effectué")
+        exit()
+    #elif quitter == "Continuer":
+    #    tout()
+    elif quitter == "Reset_save":
+        reset_save()
+        print("La sauvegarde a bien été supprimé")
+    elif quitter == "Reset_dep_save":
+        reset_dep_save()
+        print("La sauvegarde a bien été supprimé")
+    elif quitter == "Reset":
+        reset_all()
+        print("La sauvegarde a bien été supprimé")
+    #elif quitter == "Save+Continuer":
+    #    save()
+    #   print("La sauvegarde a bien été effectué")
+    #    tout()
+    elif quitter not in ["Exit", "Save", "Reset", "Reset_save", "Reset_dep_save"]:
 
-quitter = input("'Exit' pour quitter, 'Save' pour sauvegarder et quitter, 'Reset' pour reset la save")
-if quitter == "Exit":
-    print("Vous allez quitter le programme")
-    exit()
-elif quitter == "Save":
-    save()
-    print("La sauvegarde a bien été effectué")
-    exit()
-#elif quitter == "Continuer":
-#    tout()
-elif quitter == "Reset_save":
-    reset_save()
-    print("La sauvegarde a bien été supprimé")
-elif quitter == "Reset_dep_save":
-    reset_dep_save()
-    print("La sauvegarde a bien été supprimé")
-elif quitter == "Reset":
-    reset_all()
-    print("La sauvegarde a bien été supprimé")
-#elif quitter == "Save+Continuer":
-#    save()
-#   print("La sauvegarde a bien été effectué")
-#    tout()
-elif quitter not in ["Exit", "Save", "Reset", "Reset_save", "Reset_dep_save"]:
-
-    while quitter not in ["Save", "Quitter", "Reset_save", "Reset_dep_save", "Reset"]:
-        try:
-            quitter = input("'Exit' pour quitter, 'Save' pour sauvegarder et quitter, 'Reset' pour reset la save")
-            if quitter == "Exit":
-                print("Vous allez quitter le programme")
-                exit()
-            elif quitter == "Save":
-                save()
-                print("La sauvegarde a bien été sauvegardé")
-                exit()
-#            elif quitter == "Continuer":
-#                tout()
-            elif quitter == "Reset_save":
-                reset_save()
-                print("La sauvegarde a bien été supprimé")
-            elif quitter == "Reset_dep_save":
-                reset_dep_save()
-                print("La sauvegarde a bien été supprimé")
-            elif quitter == "Reset":
-                reset_all()
-                print("La sauvegarde a bien été supprimé")
-#            elif quitter == "Save+Continuer":
-#                save()
-#                print("La sauvegarde a bien été effectué")
-#                tout()
-            elif quitter != "Exit" "Save" "Reset":
+        while quitter not in ["Save", "Quitter", "Reset_save", "Reset_dep_save", "Reset"]:
+            try:
+                quitter = input("'Exit' pour quitter, 'Save' pour sauvegarder et quitter, 'Reset' pour reset la save")
+                if quitter == "Exit":
+                    print("Vous allez quitter le programme")
+                    exit()
+                elif quitter == "Save":
+                    save()
+                    print("La sauvegarde a bien été sauvegardé")
+                    exit()
+    #            elif quitter == "Continuer":
+    #                tout()
+                elif quitter == "Reset_save":
+                    reset_save()
+                    print("La sauvegarde a bien été supprimé")
+                elif quitter == "Reset_dep_save":
+                    reset_dep_save()
+                    print("La sauvegarde a bien été supprimé")
+                elif quitter == "Reset":
+                    reset_all()
+                    print("La sauvegarde a bien été supprimé")
+    #            elif quitter == "Save+Continuer":
+    #                save()
+    #                print("La sauvegarde a bien été effectué")
+    #                tout()
+                elif quitter != "Exit" "Save" "Reset":
+                    print("Entre une des options")
+            except ValueError:
                 print("Entre une des options")
-        except ValueError:
-            print("Entre une des options")
-        
+
+tout()
